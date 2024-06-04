@@ -14,3 +14,11 @@ class TestCheckout():
     def test_unkown_sku(self):
         assert checkout_solution.checkout("Z") == -1
 
+    def test_Es_get_free_B(self):
+        assert checkout_solution.checkout("EEB") == 80
+        assert checkout_solution.checkout("EEBB") == 120
+        assert checkout_solution.checkout("")
+
+
+
+

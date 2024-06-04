@@ -19,8 +19,8 @@ def checkout(skus):
     for sku in skus:
         counts[sku] += 1
 
-    for 
-
+    free_Bs = counts["E"] // 2
+    counts["B"] = max(0, counts["B"] - free_Bs)
 
     total = 0
     for sku, count in counts.items():
@@ -46,6 +46,9 @@ def handle_item(sku, count):
         return count * 20
     elif sku == "D":
         return count * 15
+    elif sku == "E":
+        return count * 40
     else:
         raise ValueError(f"Unexpected sku: {sku}")
+
 
