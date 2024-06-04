@@ -44,8 +44,3 @@ def handle_item(sku, count):
         return count * 15
     else:
         raise ValueError(f"Unexpected sku: {sku}")
-
-
-
-
-

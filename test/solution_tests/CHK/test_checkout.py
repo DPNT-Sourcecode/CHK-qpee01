@@ -14,7 +14,3 @@ class TestCheckout():
     def test_unkown_sku(self):
         assert checkout_solution.checkout("Z") == -1
 
-
-
-
-
