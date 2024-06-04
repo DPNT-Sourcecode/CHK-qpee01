@@ -35,9 +35,10 @@ def checkout(skus):
 
 def handle_item(sku, count):
     if sku == "A":
-        offer_n = count // 3
-        remainder_n = count % 3
-        return offer_n * 130 + 50 * remainder_n
+        offer_5A_n = count // 5
+        offer_3A_n = count % 5 // 3
+        remainder_n = count - offer_5A_n * 5 - offer_3A_n * 3
+        return offer_5A_n * 200 + offer_3A_n * 130 + 50 * remainder_n
     elif sku == "B":
         offer_n = count // 2
         remainder_n = count % 2
@@ -50,5 +51,6 @@ def handle_item(sku, count):
         return count * 40
     else:
         raise ValueError(f"Unexpected sku: {sku}")
+
 
 

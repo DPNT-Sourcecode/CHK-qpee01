@@ -5,7 +5,7 @@ class TestCheckout():
     def test_cd(self):
         assert checkout_solution.checkout("CDDC") == 70
 
-    def test_special(self):
+    def test_A_special(self):
         assert checkout_solution.checkout("AAAA") == 180
 
     def test_empty(self):
@@ -19,6 +19,7 @@ class TestCheckout():
         assert checkout_solution.checkout("EEBB") == 110
         assert checkout_solution.checkout("EE") == 80
         assert checkout_solution.checkout("EEBBB") == 125
+
 
 
 
