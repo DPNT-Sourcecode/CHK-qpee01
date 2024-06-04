@@ -13,6 +13,8 @@ def checkout(skus):
     | D    | 15    |                |
     +------+-------+----------------+
     """
+    skus = skus.lower()
+
     counts = defaultdict(lambda: 0)
 
     for sku in skus:
@@ -27,19 +29,20 @@ def checkout(skus):
 
 
 def handle_item(sku, count):
-    if sku == "A":
+    if sku == "a":
         offer_n = count // 3
         remainder_n = count % 3
         return offer_n * 130 + 50 * remainder_n
-    elif sku == "B":
+    elif sku == "b":
         offer_n = count // 2
         remainder_n = count % 2
         return offer_n * 45 + 30 * remainder_n
-    elif sku == "C":
+    elif sku == "c":
         return count * 20
-    elif sku == "D":
+    elif sku == "d":
         return count * 15
     else:
         raise ValueError(f"Unexpected sku: {sku}")
+
 
 

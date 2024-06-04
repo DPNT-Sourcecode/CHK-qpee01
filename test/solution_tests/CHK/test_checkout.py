@@ -6,7 +6,7 @@ class TestCheckout():
         assert checkout_solution.checkout("CDDC") == 70
 
     def test_special(self):
-        assert checkout_solution.checkout("AAAA") == 180
+        assert checkout_solution.checkout("aAAA") == 180
 
     def test_empty(self):
         assert checkout_solution.checkout("") == 0
@@ -14,6 +14,7 @@ class TestCheckout():
     def test_unkown_sku(self):
         with pytest.raises(ValueError):
             checkout_solution.checkout("Z")
+
 
 
 
