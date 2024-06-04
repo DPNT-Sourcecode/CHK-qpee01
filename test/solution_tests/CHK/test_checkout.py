@@ -6,7 +6,9 @@ class TestCheckout():
         assert checkout_solution.checkout("CDDC") == 70
 
     def test_A_special(self):
-        assert checkout_solution.checkout("AAAA") == 180
+        assert checkout_solution.checkout(4 * "A") == 130 + 50
+        assert checkout_solution.checkout(6 * "A") == 200 + 50
+        assert checkout_solution.checkout(8 * "A") == 200 + 130
 
     def test_empty(self):
         assert checkout_solution.checkout("") == 0
@@ -19,6 +21,7 @@ class TestCheckout():
         assert checkout_solution.checkout("EEBB") == 110
         assert checkout_solution.checkout("EE") == 80
         assert checkout_solution.checkout("EEBBB") == 125
+
 
 
 
