@@ -1,4 +1,4 @@
-from solutions.CHK import checkout_solution
+from lib.solutions.CHK import checkout_solution
 import pytest
 
 class TestCheckout():
