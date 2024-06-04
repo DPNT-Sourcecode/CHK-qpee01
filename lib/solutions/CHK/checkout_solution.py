@@ -1,4 +1,4 @@
-
+from collections import defaultdict
 
 # noinspection PyUnusedLocal
 # skus = unicode string
@@ -13,6 +13,19 @@ def checkout(skus):
     | D    | 15    |                |
     +------+-------+----------------+
     """
-    items = list(skus)
+    counts = defaultdict(lambda: 0)
+
+    for sku in skus:
+        counts[sku] += 1
 
     
+    for sku, count in counts.items():
+
+
+
+
+def handle_item(sku, count):
+    if sku == "A":
+        offer_n =
+
+
