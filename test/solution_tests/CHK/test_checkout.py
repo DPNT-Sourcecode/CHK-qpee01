@@ -1,6 +1,19 @@
-from solutions.SUM import sum_solution
+from solutions.CHK import checkout_solution
+import pytest
+
+class TestCheckout():
+    def test_cd(self):
+        assert checkout_solution.checkout("CDDC") == 70
+
+    def test_special(self):
+        assert checkout_solution.checkout("AAAA") == 180
+
+    def test_empty(self):
+        assert checkout_solution.checkout("") == 0
+
+    def test_unkown_sku(self):
+        with pytest.raises(ValueError):
+            checkout_solution.checkout("Z")
 
 
-class TestSum():
-    def test_sum(self):
-        assert sum_solution.compute(1, 2) == 3
+
