@@ -17,8 +17,11 @@ def checkout(skus):
 
     counts = defaultdict(lambda: 0)
 
+    valid_skus = "abcd"
+
     for sku in skus:
-        counts[sku] += 1
+        if sku in valid_skus:
+            counts[sku] += 1
 
     total = 0
     for sku, count in counts.items():
@@ -43,6 +46,7 @@ def handle_item(sku, count):
         return count * 15
     else:
         raise ValueError(f"Unexpected sku: {sku}")
+
 
 
 
